@@ -26,16 +26,46 @@
 
 // })
 
-const promisethree = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        console.log('hi ');
-        resolve({ name: "ajit ", email: "ajit mathpatii 211@ gmail.com" })
+// const promisethree = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         console.log('hi ');
+//         resolve({ name: "ajit ", email: "ajit mathpatii 211@ gmail.com" })
 
+//     }, 1000);
+
+// })
+// promisethree.then(({ name ,email }) => {
+//     console.log(name ,email);
+
+
+// })
+
+const promisefour = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        let error = 1;
+        if (!error) {
+            resolve({ usename: "ajit ", age: 20, city: "solapur" });
+        }
+        else {
+            reject()
+        }
     }, 1000);
 
 })
-promisethree.then(({ name ,email }) => {
-    console.log(name ,email);
 
+promisefour.then((user) => {
+    return user.usename;
+
+}).then((usename) => {
+    console.log(usename);
+
+
+}).catch(() => {
+    console.log("error he bai");
+
+
+}).finally(() => {
+    console.log('hi iam ajit mathpati');
 
 })
+
