@@ -2,7 +2,10 @@ function userdetails(username, age, city) {
     this.username = username;
     this.age = age;
     this.city = city;
-    return this
+    this.geet = function () {
+        console.log(`wecome ${this.username}`);
+
+    }
 
 }
 const details = new userdetails("ajit", 21, "solapur");
@@ -10,3 +13,5 @@ const details = new userdetails("ajit", 21, "solapur");
 const info = new userdetails("sujit", 24, "solapur");
 console.log(details);
 console.log(info);
+console.log(details.geet);
+console.log(info.geet);
