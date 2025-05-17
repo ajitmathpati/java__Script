@@ -1,15 +1,27 @@
-const promiseone = new Promise((resolve, reject) => {
+// const promiseone = new Promise((resolve, reject) => {
 
-    //do any async task
-    //dbcall,creptography,netwoek 
+//     //do any async task
+//     //dbcall,creptography,netwoek 
+//     setTimeout(() => {   this is called async 
+//         console.log('hi ajit');
+//         resolve()
+
+//     }, 3000);
+
+// })
+// promiseone.then(() => {
+//     console.log(" promise consume");
+
+// })
+
+
+new Promise((resolve, reject) => {
     setTimeout(() => {
-        console.log('hi ajit');
+        console.log('HI I AM MATHPATI');
         resolve()
 
-    }, 3000);
-
-})
-promiseone.then(() => {
-    console.log(" promise consume");
+    }, 1000);
+}).then(() => {
+    console.log('async 2 resolve');
 
 })
