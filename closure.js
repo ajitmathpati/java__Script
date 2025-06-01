@@ -1,9 +1,23 @@
-function outer() {
+// function outer() {
+//     let name = "ajit";
+//     function inner() {
+//         console.log("inner name:", name);
+//     }
+//     inner();
+// }
+// outer();
+// console.log("outer nam:", name);
+
+
+function makefun() {
     let name = "ajit";
-    function inner() {
-        console.log("inner name:", name);
+    function display() {
+        console.log("name:", name);
+
     }
-    inner();
+    return display;
 }
-outer();
-console.log("outer nam:", name);;
+const myfun = makefun();
+console.log("myfun:",myfun);
+
+myfun();
